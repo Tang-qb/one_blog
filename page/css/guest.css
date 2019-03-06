@@ -1,0 +1,52 @@
+.intro{
+  padding: 30px 20px;
+  background: rgba(255,255,255,.5);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.4);
+}
+
+.intro p{
+  padding: 6px 0;
+  font-size: 14px;
+  color: red;
+}
+
+.intro p:first-child{
+  color: #000;
+}
+
+
+.blog{
+  padding: 20px 0 10px 0;
+}
+
+.blog p{
+  padding-bottom: 10px;
+}
+
+.blog_comments{
+  border: 1px dashed rgba(0,0,0,.5);
+  padding: 10px;
+  border-radius: 5px;
+  background: #d9edf7;
+  font-size: 14px;
+  color: #31708f;
+  margin-bottom: 10px;
+}
+
+.blog_comments b{
+  font-weight: bold;
+}
+
+.blog_comments a{
+  color: #31708f;
+}
+
+.blog_comments p img{
+  width: 40px;
+  height: 40px;
+}
+
+.blog_comments a:hover{
+  color: #337ab7;
+}

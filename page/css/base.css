@@ -1,0 +1,77 @@
+.right_module{
+  background: #191919;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.right_module p{
+  height: 40px;
+  background: #000;
+  line-height: 40px;
+  padding-left: 10px;
+  color: aqua;
+}
+
+.right_module:nth-child(1){
+  padding-bottom: 20px;
+}
+.right_module:nth-child(1) a{
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  margin-right: 5px;
+  color: dodgerblue;
+}
+
+.right_module:nth-child(1) p{
+  margin-bottom: 15px;
+}
+
+.right_module ul li{
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  padding: 15px 10px; 
+}
+
+.right_module ul li:last-child{
+  border-bottom: none;
+}
+
+.right_module ul li a{
+  color: #eee;
+  font-size: 14px;
+  
+}
+.right_module ul li a:hover{
+  color: #337ab7;
+}
+
+.right_module:nth-child(3) ul li .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.right_module:nth-child(3) ul li .flex span{
+  font-size: 14px;
+}
+
+.right_module:nth-child(3) ul li .review a{
+  color:  rgba(255,255,255,.3);
+  font-size: 14px;
+}
+
+.right_module:nth-child(3) ul li .review a:hover{
+  color: #337ab7;
+}
+
+.right_module:nth-child(3) ul li{
+  padding: 10px 10px;
+}
+
+.right_module:nth-child(4) ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
