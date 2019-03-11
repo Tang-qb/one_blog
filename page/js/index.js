@@ -2,7 +2,6 @@ const everyDay = new Vue({
   el: '#every_day',
   data: {
     content: 'Years may wrinkle the skin, but to give up enthusiasm wrinkles the soul.'
-
   },
   computed: {
     getContent(){
@@ -13,7 +12,6 @@ const everyDay = new Vue({
     
   },
 })
-
 
 
 const articleList = new Vue({
@@ -56,9 +54,7 @@ const articleList = new Vue({
         id: '4',
         link:'#'
       }
-      
     ]
-
   },
   computed: {
     getContent(){
@@ -69,3 +65,4 @@ const articleList = new Vue({
     
   },
 })
+
