@@ -16,5 +16,15 @@ const editEveryDay = (req, res) => {
 
 path.set('/editEveryDay', editEveryDay)
 
+const queryEveryDay = (req, res) => {
+  everyDao.queryEveryDay(result => {
+    res.writeHead(200)
+    res.write(resUtil.writeResult('success', '添加成功', result))
+    res.end()
+  })
+}
+
+
+path.set('/queryEveryDay', queryEveryDay)
 
 module.exports.path = path

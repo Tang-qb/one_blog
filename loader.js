@@ -21,4 +21,5 @@ for (let i = 0; i < files.length; i++){
   }
 }
 
+
 module.exports = pathMap

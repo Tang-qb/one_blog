@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./css/index.css">
   <link type="favicon" rel="shortcut icon" href="./img/favicon.ico" />
   <script src="https://cdn.bootcss.com/vue/2.6.4/vue.min.js"></script>
+  <script src="./js/axios.js"></script>
 </head>
 
 <body>
@@ -23,6 +24,8 @@
           <li><a href="./sitemap.html">地图</a></li>
           <li><a href="./about.html">关于</a></li>
           <li><a href="./guest.html">留言</a></li>
+          <li><a href="./edit_blog.html">编辑博客</a></li>
+          <li><a href="./edit_every_day.html">编辑每日一句</a></li>
         </ul>
       </div>
       <div class="search">
@@ -36,6 +39,7 @@
       <div class="every_day" id="every_day">
         <span class="day">每日一句</span>
         <p v-html="getContent"></p>
+        <!-- <p>{{content}}</p> -->
         <!-- <p>
           岁月留痕，只及肌肤；激情不再，皱起心灵。
           <span class="pull">———— Samuel Ullman</span>

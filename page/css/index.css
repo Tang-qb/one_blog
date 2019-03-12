@@ -49,6 +49,9 @@ header{
   line-height: 50px;
   margin: 0 5px;
 }
+.tag ul li:last-child{
+  width: 100px;
+}
 .tag ul li:hover a, .title:hover{
   color: #ccc;
 }

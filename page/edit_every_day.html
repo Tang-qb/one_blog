@@ -85,15 +85,17 @@
       <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
     </div>
 
-    <div id="editor">
+    <div id="editor"></div>
+    <!-- <input type="text" placeholder="请输入英文每日一句" id="eng">
+    <input type="text" placeholder="请输入作者" id="author"> -->
 
-    </div>
-
-    <button onclick="submit()" class="btn" style="margin-top: 20px">提交</button>
+    <button onclick="submit()" class="btn" style="margin-top: 20px;display: block;">提交</button>
   </div>
   <script>
     function submit() {
-      const content = $('#editor').html()
+      const content = $('#editor').html().trim()
+            // eng = $('#eng').val(),
+            // author = $('#author').val()
       if (content.length == 0) {
         alert('输入的内容不能为空')
       } 
@@ -107,6 +109,8 @@
             let result = JSON.parse(data)
             alert(result.msg)
             $('#editor').html('')
+            // $('#eng').html('')
+            // $('#author').html('')
           },
           error: (err) => {
             console.log(err)

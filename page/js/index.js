@@ -1,7 +1,7 @@
 const everyDay = new Vue({
   el: '#every_day',
   data: {
-    content: 'Years may wrinkle the skin, but to give up enthusiasm wrinkles the soul.'
+    content: ''
   },
   computed: {
     getContent(){
@@ -9,7 +9,9 @@ const everyDay = new Vue({
     }
   },
   created() {
-    
+    axios.get('/queryEveryDay')
+        .then(res => this.content = res.data.data[0].content)
+        .catch(err => console.log(err))
   },
 })
 

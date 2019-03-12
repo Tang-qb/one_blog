@@ -13,4 +13,19 @@ const insertEveryDay = (content, ctime, success) => {
   connection.end()
 }
 
-module.exports.insertEveryDay = insertEveryDay
+const queryEveryDay = success => {
+  let sql = 'select * from every_day order by id desc limit 1'
+  let connection = dbutil.createConnection()
+
+  connection.connect()
+  connection.query(sql, (err, res) => {
+    if (err == null) success(res)
+    else throw new Error(err)
+  })
+  connection.end()
+}
+
+module.exports = {
+  insertEveryDay,
+  queryEveryDay
+}

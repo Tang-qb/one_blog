@@ -79,20 +79,31 @@
     <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
   </div>
 
-  <div id="editor">
-    Go ahead&hellip;
-  </div>
+  <div id="editor"></div>
 
-  <button onclick="submit" class="btn" style="margin-top: 20px">提交</button>
+  <button onclick="submit()" class="btn" style="margin-top: 20px">提交</button>
 </div>
 <script>
   function submit() {
-    conole.log(111)
     const content = $('#editor').html(),
-          title = $('#title').html(),
-          tag = $('#tag').html()
+          title = $('#title').val(),
+          tag = $('#tag').val()
+
+    $.ajax({
+      method: 'post',
+      url: '/editBlog?title=' + title + '&tags=' + tag,
+      type: 'json',
+      data: content,
+      success: (data) => {
+        console.log(data)
+      },
+      error: (err) => {
+        console.log(err)
+      }
+    })
   }
 </script>
+
 <script>
   $(function(){
     function initToolbarBootstrapBindings() {
